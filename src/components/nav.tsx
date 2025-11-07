@@ -3,7 +3,7 @@
 import Image from "next/image";
 import logo from '../app/assets/images/Logo.png'
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation"
 
 interface navProps{
@@ -50,9 +50,6 @@ export default function Navbar({color, invert, showLoja, showFav, showCart, show
           <Link className={`${showCtt ? 'block' : 'hidden'} cursor-pointer hover:tracking-wide duration-200`} href={"#footer"}>Contato</Link>
         </div>
           <div className="hidden md:flex gap-6 justify-center items-center">
-            <button onClick={() => router.push("/login")} className={`w-20 py-1 px-3 rounded-3xl cursor-pointer font-bold duration-350 ${color ? 'text-black hover:text-white' : 'text-white hover:text-black'} ${invert ? 'bg-white hover:bg-black' : 'bg-black hover:bg-white hover:border'}`}>
-              Login
-            </button>
           </div>
         <button className="md:hidden p-2 cursor-pointer focus:outline-none motion-safe:hover:scale-110 transition" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">
           <span className="block w-6 h-0.5 bg-current mb-1"></span>
@@ -71,7 +68,6 @@ export default function Navbar({color, invert, showLoja, showFav, showCart, show
             {showCart && <Link href="/cart" className="hover:tracking-widest duration-200">Carrinho</Link>}
             {showSobre && <Link href="/#about" className="hover:tracking-widest duration-200">Sobre</Link>}
             {showCtt && <Link href="#footer" className="hover:tracking-widest duration-200">Contato</Link>}
-              <button onClick={() => router.push("/login")} className={`w-[25vw] py-1 px-3 rounded-3xl cursor-pointer font-bold duration-350 ${color ? 'text-black hover:text-white' : 'text-white hover:text-black'} ${invert ? 'bg-white hover:bg-black' : 'bg-black hover:bg-white hover:border'}`}>Login</button>
           </div>
         </div>
       )}

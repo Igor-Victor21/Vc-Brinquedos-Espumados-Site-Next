@@ -20,22 +20,13 @@ export default function Navbar({color, invert, showLoja, showFav, showCart, show
 
   const router = useRouter()
   const [menuOpen, setMenuOpen] = useState(false)
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [showToast, setShowToast] = useState(false)
 
-  useEffect(() => {
-    const user = localStorage.getItem('user')
-    setIsLoggedIn(!!user)
-  }, [])
-
   const handleFavoriteClick = () => {
-    if (!isLoggedIn) {
       setShowToast(true)
       setTimeout(() => setShowToast(false), 5000)
+      router.push('/favorites')
       return
-      
-    }
-    router.push('/favorites')
   }
 
   return (
@@ -52,19 +43,17 @@ export default function Navbar({color, invert, showLoja, showFav, showCart, show
           <Link className={`${showFav ? 'block' : 'hidden'} cursor-pointer hover:tracking-wide duration-200`} href={"/favorites"}
             onClick={(e) => 
               {
-              if(!isLoggedIn){e.preventDefault()
-              handleFavoriteClick()}}}>Favoritos</Link>
+              e.preventDefault()
+              handleFavoriteClick()}}>Favoritos</Link>
           <Link className={`${showCart ? 'block' : 'hidden'} cursor-pointer hover:tracking-wide duration-200`} href={"/cart"}>Carrinho</Link>
           <Link className={`${showSobre ? 'block' : 'hidden'} cursor-pointer hover:tracking-wide duration-200`} href={"/#about"}>Sobre</Link>
           <Link className={`${showCtt ? 'block' : 'hidden'} cursor-pointer hover:tracking-wide duration-200`} href={"#footer"}>Contato</Link>
         </div>
-        {!isLoggedIn && (
           <div className="hidden md:flex gap-6 justify-center items-center">
             <button onClick={() => router.push("/login")} className={`w-20 py-1 px-3 rounded-3xl cursor-pointer font-bold duration-350 ${color ? 'text-black hover:text-white' : 'text-white hover:text-black'} ${invert ? 'bg-white hover:bg-black' : 'bg-black hover:bg-white hover:border'}`}>
               Login
             </button>
           </div>
-        )}
         <button className="md:hidden p-2 cursor-pointer focus:outline-none motion-safe:hover:scale-110 transition" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">
           <span className="block w-6 h-0.5 bg-current mb-1"></span>
           <span className="block w-6 h-0.5 bg-current mb-1"></span>
@@ -77,21 +66,13 @@ export default function Navbar({color, invert, showLoja, showFav, showCart, show
           <div className="flex flex-col items-center px-9 py-4 space-y-4 shadow-md relative z-10">
             {showLoja && <Link href="/products" className="hover:tracking-widest duration-200">Loja</Link>}
             {showFav && <Link href="/favorites" className="hover:tracking-widest duration-200"
-            onClick={(e) => {if(!isLoggedIn){e.preventDefault()
-            handleFavoriteClick()}}}>Favoritos</Link>}
+            onClick={(e) => {e.preventDefault()
+            handleFavoriteClick()}}>Favoritos</Link>}
             {showCart && <Link href="/cart" className="hover:tracking-widest duration-200">Carrinho</Link>}
             {showSobre && <Link href="/#about" className="hover:tracking-widest duration-200">Sobre</Link>}
             {showCtt && <Link href="#footer" className="hover:tracking-widest duration-200">Contato</Link>}
-            {!isLoggedIn && (
               <button onClick={() => router.push("/login")} className={`w-[25vw] py-1 px-3 rounded-3xl cursor-pointer font-bold duration-350 ${color ? 'text-black hover:text-white' : 'text-white hover:text-black'} ${invert ? 'bg-white hover:bg-black' : 'bg-black hover:bg-white hover:border'}`}>Login</button>
-            )}
           </div>
-        </div>
-      )}
-      {showToast && (
-        <div className="flex flex-col absolute w-[80vw] md:w-[40vw] xl:w-[20vw] top-[10%] md:top-[85%] left-[10%] bg-gray-500 p-4 z-40 rounded-lg">
-          <button onClick={() => setShowToast(false)} className="text-gray-300 hover:text-white duration-200 font-bold self-end cursor-pointer">X</button>
-          <p className="text-[12px] font-bold text-white">Você precisa estar logado para acessar os favoritos.</p>
         </div>
       )}
     </div>

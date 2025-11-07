@@ -21,7 +21,7 @@ export default async function CardListServer({ all, queryRouter, filterRouter }:
   }
 
   try {
-    const res = await fetch("http://localhost:5555/products", {
+    const res = await fetch("https://api-vc-brinquedos-espumados.onrender.com/products", {
       cache: "no-store",
     });
 

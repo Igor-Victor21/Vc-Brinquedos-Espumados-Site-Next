@@ -22,8 +22,6 @@ interface Produto {
 export default function CartPage() {
   const [produtos, setProdutos] = useState<Produto[]>([])
   const [cartItems, setCartItems] = useState<CartItem[]>([])
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
-  const [showToast, setShowToast] = useState(false)
 
   const whatsappNumber = "5541987446352"
 
@@ -46,7 +44,6 @@ export default function CartPage() {
       .catch(err => console.error('Erro ao buscar produtos:', err))
 
       const user = localStorage.getItem('user')
-      setIsLoggedIn(!!user)
   }, [])
 
   const getQuantidade = (id: number) =>
@@ -83,12 +80,6 @@ export default function CartPage() {
   }, 0)
 
   const handleZap = () => {
-
-    if (!isLoggedIn) {
-      setShowToast(true)
-      setTimeout(() => setShowToast(false), 5000)
-      return
-    }
 
     const itemList = produtos.map((produto) => {
     const quantidade = getQuantidade(produto.id)
@@ -142,12 +133,6 @@ export default function CartPage() {
           <h3>Total</h3>
           <p>R$: {total.toFixed(2)}</p>
         </div>
-        {showToast && (
-          <div className="absolute bottom-20 left-1/2 -translate-x-1/2 w-[80vw] md:w-[40vw] xl:w-[20vw] bg-gray-500 p-4 z-50 rounded-lg shadow-md">
-            <button onClick={() => setShowToast(false)} className="text-gray-300 hover:text-white cursor-pointer font-bold self-end mb-2">X</button>
-            <p className="text-sm text-white font-bold text-center">Você precisa estar logado para finalizar a compra.</p>
-          </div>
-        )}
         <button onClick={handleZap} className="absolute w-52 -bottom-4 self-center cursor-pointer motion-safe:hover:scale-105 p-1 m-8 bg-[#7DACFF] active:bg-[#6C85B3] active:text-white rounded-lg duration-200">Finalizar Compra</button>
       </section>
     </>

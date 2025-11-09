@@ -1,5 +1,5 @@
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[13].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"src\\app\\layout.tsx","import":"Geist","arguments":[{"variable":"--font-geist-sans","subsets":["latin"]}],"variableName":"geistSans"} ***!
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[14].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"src\\app\\layout.tsx","import":"Geist","arguments":[{"variable":"--font-geist-sans","subsets":["latin"]}],"variableName":"geistSans"} ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /* cyrillic */
 @font-face {
@@ -33,7 +33,7 @@
 }
 
 /*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[13].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"src\\app\\layout.tsx","import":"Geist_Mono","arguments":[{"variable":"--font-geist-mono","subsets":["latin"]}],"variableName":"geistMono"} ***!
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[14].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"src\\app\\layout.tsx","import":"Geist_Mono","arguments":[{"variable":"--font-geist-mono","subsets":["latin"]}],"variableName":"geistMono"} ***!
   \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /* cyrillic */
 @font-face {
@@ -67,7 +67,7 @@
 }
 
 /*!*****************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/app/globals.css ***!
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./src/app/globals.css ***!
   \*****************************************************************************************************************************************************************************************************************************************************************/
 /*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
 @layer properties;
@@ -80,12 +80,10 @@
       "Courier New", monospace;
     --color-red-50: oklch(97.1% 0.013 17.38);
     --color-red-300: oklch(80.8% 0.114 19.571);
-    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-red-600: oklch(57.7% 0.245 27.325);
+    --color-orange-500: oklch(70.5% 0.213 47.604);
     --color-yellow-400: oklch(85.2% 0.199 91.936);
-    --color-yellow-500: oklch(79.5% 0.184 86.047);
     --color-blue-300: oklch(80.9% 0.105 251.813);
-    --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
@@ -99,8 +97,6 @@
     --container-7xl: 80rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
-    --text-base: 1rem;
-    --text-base--line-height: calc(1.5 / 1);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-2xl: 1.5rem;
@@ -121,7 +117,6 @@
     --radius-md: 0.375rem;
     --radius-lg: 0.5rem;
     --radius-2xl: 1rem;
-    --radius-3xl: 1.5rem;
     --radius-4xl: 2rem;
     --blur-sm: 8px;
     --default-transition-duration: 150ms;
@@ -288,35 +283,23 @@
   .-top-6 {
     top: calc(var(--spacing) * -6);
   }
-  .-top-20 {
-    top: calc(var(--spacing) * -20);
-  }
   .top-0 {
     top: calc(var(--spacing) * 0);
-  }
-  .top-20 {
-    top: calc(var(--spacing) * 20);
-  }
-  .top-\[-100px\] {
-    top: -100px;
-  }
-  .top-\[-200px\] {
-    top: -200px;
   }
   .top-\[5\%\] {
     top: 5%;
   }
-  .top-\[10\%\] {
-    top: 10%;
-  }
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
-  .right-4 {
-    right: calc(var(--spacing) * 4);
+  .right-1 {
+    right: calc(var(--spacing) * 1);
   }
-  .right-\[-90px\] {
-    right: -90px;
+  .right-5 {
+    right: calc(var(--spacing) * 5);
+  }
+  .right-10 {
+    right: calc(var(--spacing) * 10);
   }
   .-bottom-4 {
     bottom: calc(var(--spacing) * -4);
@@ -327,14 +310,8 @@
   .bottom-12 {
     bottom: calc(var(--spacing) * 12);
   }
-  .bottom-20 {
-    bottom: calc(var(--spacing) * 20);
-  }
   .bottom-30 {
     bottom: calc(var(--spacing) * 30);
-  }
-  .-left-60 {
-    left: calc(var(--spacing) * -60);
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
@@ -342,14 +319,11 @@
   .left-1\/2 {
     left: calc(1/2 * 100%);
   }
-  .left-4 {
-    left: calc(var(--spacing) * 4);
+  .left-10 {
+    left: calc(var(--spacing) * 10);
   }
-  .left-\[-90px\] {
-    left: -90px;
-  }
-  .left-\[10\%\] {
-    left: 10%;
+  .left-100 {
+    left: calc(var(--spacing) * 100);
   }
   .z-5 {
     z-index: 5;
@@ -411,6 +385,12 @@
   .mt-\[3rem\] {
     margin-top: 3rem;
   }
+  .mt-\[10px\] {
+    margin-top: 10px;
+  }
+  .mt-px {
+    margin-top: 1px;
+  }
   .mr-5 {
     margin-right: calc(var(--spacing) * 5);
   }
@@ -419,9 +399,6 @@
   }
   .mb-1 {
     margin-bottom: calc(var(--spacing) * 1);
-  }
-  .mb-2 {
-    margin-bottom: calc(var(--spacing) * 2);
   }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
@@ -504,9 +481,6 @@
   .h-\[28vh\] {
     height: 28vh;
   }
-  .h-\[35vh\] {
-    height: 35vh;
-  }
   .h-\[40px\] {
     height: 40px;
   }
@@ -516,26 +490,17 @@
   .h-\[80vh\] {
     height: 80vh;
   }
-  .h-\[100vh\] {
-    height: 100vh;
-  }
-  .h-\[324px\] {
-    height: 324px;
-  }
-  .h-\[394px\] {
-    height: 394px;
-  }
   .h-\[500px\] {
     height: 500px;
   }
   .h-\[auto\] {
     height: auto;
   }
+  .h-auto {
+    height: auto;
+  }
   .h-full {
     height: 100%;
-  }
-  .h-screen {
-    height: 100vh;
   }
   .min-h-150 {
     min-height: calc(var(--spacing) * 150);
@@ -579,9 +544,6 @@
   .w-\[12vw\] {
     width: 12vw;
   }
-  .w-\[25vw\] {
-    width: 25vw;
-  }
   .w-\[26px\] {
     width: 26px;
   }
@@ -600,9 +562,6 @@
   .w-\[90vw\] {
     width: 90vw;
   }
-  .w-\[100vw\] {
-    width: 100vw;
-  }
   .w-full {
     width: 100%;
   }
@@ -612,20 +571,8 @@
   .max-w-7xl {
     max-width: var(--container-7xl);
   }
-  .max-w-\[55\%\] {
-    max-width: 55%;
-  }
-  .max-w-\[70\%\] {
-    max-width: 70%;
-  }
   .max-w-\[80vw\] {
     max-width: 80vw;
-  }
-  .max-w-\[90\%\] {
-    max-width: 90%;
-  }
-  .flex-1 {
-    flex: 1;
   }
   .flex-grow {
     flex-grow: 1;
@@ -640,17 +587,8 @@
     --tw-scale-z: 110%;
     scale: var(--tw-scale-x) var(--tw-scale-y);
   }
-  .scale-\[1\.05\] {
-    scale: 1.05;
-  }
   .rotate-0 {
     rotate: 0deg;
-  }
-  .rotate-90 {
-    rotate: 90deg;
-  }
-  .rotate-180 {
-    rotate: 180deg;
   }
   .cursor-default {
     cursor: default;
@@ -752,9 +690,6 @@
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
-  .rounded-3xl {
-    border-radius: var(--radius-3xl);
-  }
   .rounded-4xl {
     border-radius: var(--radius-4xl);
   }
@@ -769,6 +704,10 @@
   }
   .rounded-md {
     border-radius: var(--radius-md);
+  }
+  .rounded-t-\[25px\] {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
   }
   .rounded-b-lg {
     border-bottom-right-radius: var(--radius-lg);
@@ -807,9 +746,6 @@
   }
   .border-gray-300 {
     border-color: var(--color-gray-300);
-  }
-  .border-gray-400 {
-    border-color: var(--color-gray-400);
   }
   .border-white {
     border-color: var(--color-white);
@@ -900,11 +836,8 @@
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
   }
-  .px-3 {
-    padding-inline: calc(var(--spacing) * 3);
-  }
-  .px-4 {
-    padding-inline: calc(var(--spacing) * 4);
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
   }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
@@ -963,6 +896,15 @@
   .pl-4 {
     padding-left: calc(var(--spacing) * 4);
   }
+  .pl-\[5px\] {
+    padding-left: 5px;
+  }
+  .pl-\[15px\] {
+    padding-left: 15px;
+  }
+  .pl-\[20px\] {
+    padding-left: 20px;
+  }
   .text-center {
     text-align: center;
   }
@@ -980,10 +922,6 @@
   .text-4xl {
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
-  }
-  .text-base {
-    font-size: var(--text-base);
-    line-height: var(--tw-leading, var(--text-base--line-height));
   }
   .text-lg {
     font-size: var(--text-lg);
@@ -1029,26 +967,26 @@
   .text-black {
     color: var(--color-black);
   }
-  .text-blue-600 {
-    color: var(--color-blue-600);
-  }
   .text-gray-300 {
     color: var(--color-gray-300);
+  }
+  .text-gray-400 {
+    color: var(--color-gray-400);
   }
   .text-gray-600 {
     color: var(--color-gray-600);
   }
+  .text-orange-500 {
+    color: var(--color-orange-500);
+  }
   .text-red-50 {
     color: var(--color-red-50);
-  }
-  .text-red-500 {
-    color: var(--color-red-500);
   }
   .text-white {
     color: var(--color-white);
   }
-  .underline {
-    text-decoration-line: underline;
+  .line-through {
+    text-decoration-line: line-through;
   }
   .antialiased {
     -webkit-font-smoothing: antialiased;
@@ -1113,14 +1051,6 @@
       }
     }
   }
-  .hover\:border {
-    &:hover {
-      @media (hover: hover) {
-        border-style: var(--tw-border-style);
-        border-width: 1px;
-      }
-    }
-  }
   .hover\:border-black {
     &:hover {
       @media (hover: hover) {
@@ -1149,20 +1079,6 @@
       }
     }
   }
-  .hover\:bg-white {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-white);
-      }
-    }
-  }
-  .hover\:bg-yellow-500 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-yellow-500);
-      }
-    }
-  }
   .hover\:tracking-\[2px\] {
     &:hover {
       @media (hover: hover) {
@@ -1184,13 +1100,6 @@
       @media (hover: hover) {
         --tw-tracking: var(--tracking-widest);
         letter-spacing: var(--tracking-widest);
-      }
-    }
-  }
-  .hover\:text-black {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-black);
       }
     }
   }
@@ -1249,39 +1158,9 @@
       }
     }
   }
-  .min-\[1000px\]\:flex {
-    @media (width >= 1000px) {
-      display: flex;
-    }
-  }
   .sm\:w-\[99\.2vw\] {
     @media (width >= 40rem) {
       width: 99.2vw;
-    }
-  }
-  .md\:top-\[-170px\] {
-    @media (width >= 48rem) {
-      top: -170px;
-    }
-  }
-  .md\:top-\[-270px\] {
-    @media (width >= 48rem) {
-      top: -270px;
-    }
-  }
-  .md\:top-\[85\%\] {
-    @media (width >= 48rem) {
-      top: 85%;
-    }
-  }
-  .md\:right-\[-90px\] {
-    @media (width >= 48rem) {
-      right: -90px;
-    }
-  }
-  .md\:left-\[-90px\] {
-    @media (width >= 48rem) {
-      left: -90px;
     }
   }
   .md\:mt-35 {
@@ -1319,21 +1198,6 @@
       height: calc(var(--spacing) * 40);
     }
   }
-  .md\:h-\[404px\] {
-    @media (width >= 48rem) {
-      height: 404px;
-    }
-  }
-  .md\:h-\[414px\] {
-    @media (width >= 48rem) {
-      height: 414px;
-    }
-  }
-  .md\:h-\[450px\] {
-    @media (width >= 48rem) {
-      height: 450px;
-    }
-  }
   .md\:w-\[40vw\] {
     @media (width >= 48rem) {
       width: 40vw;
@@ -1347,11 +1211,6 @@
   .md\:w-md {
     @media (width >= 48rem) {
       width: var(--container-md);
-    }
-  }
-  .md\:max-w-\[404px\] {
-    @media (width >= 48rem) {
-      max-width: 404px;
     }
   }
   .md\:flex-row {

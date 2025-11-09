@@ -3,7 +3,7 @@ import btnImg from './assets/images/btnStar.png'
 import btnTT from './assets/images/ttBlueStars.png'
 import banner from './assets/images/bannerLP.png'
 import onmStore  from './assets/images/ornamentStore.png'
-import aboutPic1 from './assets/images/AboutPic1.png'
+import aboutPic1 from './assets/images/AboutPic1.jpeg'
 import aboutPic2 from './assets/images/AboutPic2.png'
 import aboutVector1 from './assets/images/VectorAbout1.png'
 import aboutVector2 from './assets/images/VectorAbout2.png'
@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <section className="w-full h-170">
       <section className="relative w-full h-170">
-            <Image src={banner} alt="" draggable="false" className='w-full h-170 object-cover'/>       
+            <Image src={banner} alt="" draggable="false" className='w-screen h-170 object-cover'/>       
             <Navbar color={true} invert={true} showLoja={true} showFav={true} showCart={true} showSobre={true} showCtt={true} /> 
           <div className="mt-25 md:mt-35 ml-10 md:ml-25 absolute inset-0 flex flex-col">
             <h1 className="cursor-default font-extrabold text-3xl md:text-6xl text-red-50">Brincar com <br />
@@ -92,11 +92,11 @@ export default function Home() {
             </div> */}
           </div>
 
-          <div className="hidden xl:block xl:absolute right-0">
+          <div className="hidden xl:block xl:absolute right-5">
               <Image src={aboutPic1} alt="" width={500} className="overflow-hidden mt-11 rounded-2xl"></Image>
           </div>           
 
-          <div className="hidden xl:block xl:absolute right-0 bottom-30">
+          <div className="hidden xl:block xl:absolute right-5 bottom-30">
             <Image src={aboutPic2} alt="" width={300} className="overflow-hidden mr-80 border-15 border-white rounded-2xl"/>
           </div>
 

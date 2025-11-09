@@ -1,7 +1,7 @@
 "use client"
 
 export default function Wpp () {
-    const wppNumber = "5541987446352"
+    const wppNumber = "5541997642501"
     
     const handleZap = () => {
         const URLzap = `https://api.whatsapp.com/send?phone=${wppNumber}`

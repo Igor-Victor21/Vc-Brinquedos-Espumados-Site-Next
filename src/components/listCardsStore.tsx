@@ -4,8 +4,13 @@ type Produto = {
     id: number;
     name: string;
     description: string;
+    width?: number | null
+    length?: number | null
+    height?: number | null
+    diameter?: number | null
     image: string;
     price: number;
+    discount?: number | string | null;
 }[];
 
 interface Props{
@@ -55,8 +60,13 @@ export default async function CardListServer({ all, queryRouter, filterRouter }:
             key={item.id}
             name={item.name}
             description={item.description}
+            width={item.width}
+            length={item.length}
+            height={item.height}
+            diameter={item.diameter}
             image={item.image}
             price={item.price}
+            discount={item.discount}
             id={item.id}
           />
         ))}

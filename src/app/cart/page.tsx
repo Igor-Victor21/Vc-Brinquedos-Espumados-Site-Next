@@ -23,7 +23,7 @@ export default function CartPage() {
   const [produtos, setProdutos] = useState<Produto[]>([])
   const [cartItems, setCartItems] = useState<CartItem[]>([])
 
-  const whatsappNumber = "5541987446352"
+  const whatsappNumber = "5541997642501"
 
   useEffect(() => {
     const storedCart = localStorage.getItem('cart')
@@ -32,7 +32,7 @@ export default function CartPage() {
     const parsedCart: CartItem[] = JSON.parse(storedCart)
     setCartItems(parsedCart)
 
-    fetch('http://localhost:5555/products')
+    fetch('https://api-vc-brinquedos-espumados.onrender.com/products')
       .then(res => res.json())
       .then((allProducts: Produto[]) => {
         const idsNoCarrinho = parsedCart.map(item => item.id)

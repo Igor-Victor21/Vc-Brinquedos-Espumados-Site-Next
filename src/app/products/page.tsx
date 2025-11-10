@@ -13,9 +13,10 @@ interface Props{
 }
 
 
-export default function productsPage({searchParams} : Props){
-  const query = searchParams.query || "";
-  const filter = searchParams.filter || "todos";
+export default async function productsPage({searchParams} : Props){
+  const params = await searchParams;
+  const query = params.query || "";
+  const filter = params.filter || "todos";
 
 
     return(

@@ -9,19 +9,29 @@ import botaoComprar from '../app/assets/images/botaoComprar.png'
 interface CartBtnProps {
   id: number
   name: string
+  width?: number | null
+  length?: number | null
+  height?: number | null
+  diameter?: number | null
   price: number
+  discount?: number | string | null
   image: string
 }
 
 interface CartItem {
   id: number
   name: string
+  width?: number | null
+  length?: number | null
+  height?: number | null
+  diameter?: number | null
   price: number
+  discount?: number | string | null
   image: string
   quantity: number
 }
 
-export default function CartBtn({ id, name, price, image }: CartBtnProps) {
+export default function CartBtn({ id, name, width, length, height, diameter, price, discount, image }: CartBtnProps) {
   const [isAdding, setIsAdding] = useState(false)
   const router = useRouter()
 
@@ -39,7 +49,7 @@ export default function CartBtn({ id, name, price, image }: CartBtnProps) {
       if (existingItemIndex >= 0) {
         cart[existingItemIndex].quantity += 1
       } else {
-        cart.push({ id, name, price, image, quantity: 1 })
+        cart.push({ id, name, width, length, height, diameter, price, discount, image, quantity: 1 })
       }
 
       localStorage.setItem('cart', JSON.stringify(cart))
@@ -54,6 +64,6 @@ export default function CartBtn({ id, name, price, image }: CartBtnProps) {
 }
 
   return (
-    <button onClick={addToCart} disabled={isAdding} className='right-0 mr-5 cursor-pointer'><Image className="duration-400 hover:invert" src={botaoComprar} alt="" width={40} height={40} draggable={false}/></button>
+    <button onClick={addToCart} disabled={isAdding} className='right-0 mr-5 cursor-pointer h-auto'><Image className="duration-400 hover:invert" src={botaoComprar} alt="" width={40} draggable={false}/></button>
   )
 }

@@ -1,3 +1,5 @@
+'use client'
+
 import CartBtn from './btnCart'
 import FaveBtn from './btnFave'
 
@@ -83,7 +85,7 @@ export const CardStore = ({
             )}
           </div>
 
-          <CartBtn id={id} name={name} price={price} image={image} />
+          <CartBtn id={id} name={name} width={width} length={length} height={height} diameter={diameter} discount={discount} price={price} image={image} />
         </div>
       </div>
     </div>

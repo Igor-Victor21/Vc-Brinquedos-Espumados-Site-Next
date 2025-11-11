@@ -85,7 +85,7 @@ export const CardStore = ({
             )}
           </div>
 
-          <CartBtn id={id} name={name} width={width} length={length} height={height} diameter={diameter} discount={discount} price={price} image={image} />
+          <CartBtn id={id} name={name} width={width} length={length} height={height} diameter={diameter} discount={discount} price={price} finalPrice={finalPrice} image={image} />
         </div>
       </div>
     </div>

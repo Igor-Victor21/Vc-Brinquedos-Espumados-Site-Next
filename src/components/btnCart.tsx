@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation'
 import botaoComprar from '../app/assets/images/botaoComprar.png'
 
 interface CartBtnProps {
-  id: number
+  id: Number
   name: string
   width?: number | null
   length?: number | null
@@ -16,6 +16,8 @@ interface CartBtnProps {
   price: number
   discount?: number | string | null
   image: string
+  finalPrice: number
+
 }
 
 interface CartItem {
@@ -28,10 +30,11 @@ interface CartItem {
   price: number
   discount?: number | string | null
   image: string
+  finalPrice: number
   quantity: number
 }
 
-export default function CartBtn({ id, name, width, length, height, diameter, price, discount, image }: CartBtnProps) {
+export default function CartBtn({ id, name, width, length, height, diameter, price, discount, image, finalPrice }: CartBtnProps) {
   const [isAdding, setIsAdding] = useState(false)
   const router = useRouter()
 
@@ -49,7 +52,7 @@ export default function CartBtn({ id, name, width, length, height, diameter, pri
       if (existingItemIndex >= 0) {
         cart[existingItemIndex].quantity += 1
       } else {
-        cart.push({ id, name, width, length, height, diameter, price, discount, image, quantity: 1 })
+        cart.push({ id, name, width, length, height, diameter, price, discount, image, finalPrice, quantity: 1 })
       }
 
       localStorage.setItem('cart', JSON.stringify(cart))

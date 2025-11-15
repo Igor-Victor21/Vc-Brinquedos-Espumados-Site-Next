@@ -4,7 +4,6 @@ import { Suspense } from "react"
 import Image from "next/image"
 import btnTT from '../assets/images/ttBlueStars.png'
 import Footer from "@/components/footer"
-import Link from "next/link"
 import { SearchBar } from "@/components/searchBar"
 import { BarContent } from "@/components/barContent"
 

@@ -13,7 +13,7 @@ interface Props {
   diameter?: number | null
   price: number
   discount?: number | string | null
-  id: number
+  id: string
 }
 
 export const CardStore = ({

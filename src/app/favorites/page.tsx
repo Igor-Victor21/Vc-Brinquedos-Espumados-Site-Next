@@ -6,7 +6,7 @@ import NavBar from '@/components/nav'
 import EmptyFave from '../assets/images/faveEsmpty.png'
 
 interface FavoriteItem {
-  id: number
+  id: string
   name: string
   price: number
   image: string
@@ -24,7 +24,7 @@ export default function Favorites() {
     setFavorites(parsedFaves)
   }, [])
 
-  const removerFavorito = (id: number) => {
+  const removerFavorito = (id: string) => {
     const novosFavoritos = favorites.filter(item => item.id !== id)
     setFavorites(novosFavoritos)
     localStorage.setItem('favorites', JSON.stringify(novosFavoritos))

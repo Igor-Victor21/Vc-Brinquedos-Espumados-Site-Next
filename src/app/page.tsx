@@ -56,7 +56,7 @@ export default function Home() {
 
             <div className="flex flex-col md:flex-row justify-center gap-5">
             <Suspense fallback={<div>Carregando produtos...</div>}>
-              <CardListServer all={false} queryRouter=""/>
+              <CardListServer all={false} queryRouter="" filterRouter="" />
             </Suspense>              
             </div>
 

@@ -7,13 +7,13 @@ import Navbar from '@/components/nav'
 import EmptyCart from '../assets/images/isempty.png'
 
 interface CartItem {
-  id: number
+  id: string
   quantity: number
   finalPrice?: number
 }
 
 interface Produto {
-  id: number
+  id: string
   name: string
   description: string
   price: number
@@ -47,7 +47,7 @@ export default function CartPage() {
     const user = localStorage.getItem('user')
   }, [])
 
-  const getQuantidade = (id: number) =>
+  const getQuantidade = (id: string) =>
     cartItems.find(item => item.id === id)?.quantity ?? 0
 
   const atualizarCarrinho = (novoCarrinho: CartItem[]) => {
@@ -56,7 +56,7 @@ export default function CartPage() {
     window.dispatchEvent(new Event('cartUpdated'))
   }
 
-  const alterarQuantidade = (id: number, tipo: 'incrementar' | 'decrementar') => {
+  const alterarQuantidade = (id: string, tipo: 'incrementar' | 'decrementar') => {
     const novoCarrinho = cartItems
       .map(item => {
         if (item.id === id) {

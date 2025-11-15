@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation'
 import botaoComprar from '../app/assets/images/botaoComprar.png'
 
 interface CartBtnProps {
-  id: Number
+  id: string
   name: string
   width?: number | null
   length?: number | null
@@ -21,7 +21,7 @@ interface CartBtnProps {
 }
 
 interface CartItem {
-  id: number
+  id: string
   name: string
   width?: number | null
   length?: number | null

@@ -7,14 +7,14 @@ import { useRouter } from "next/navigation"
 import botaoFavorito from '../app/assets/images/botaoFavorito.png'
 
 interface FaveBtnProps {
-  id: number
+  id: string
   name: string
   price: number
   image: string
 }
 
 interface FaveItem {
-  id: number
+  id: string
   name: string
   price: number
   image: string

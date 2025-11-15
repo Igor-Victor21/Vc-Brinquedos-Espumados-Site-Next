@@ -1,7 +1,7 @@
 import { CardStore } from "./cardsStore";
 
 type Produto = { 
-    id: number;
+    id: string;
     name: string;
     description: string;
     width?: number | null

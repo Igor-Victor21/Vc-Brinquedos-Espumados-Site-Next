@@ -33,15 +33,15 @@ export default function Favorites() {
 
   return (
     <>
-      <NavBar color={false} invert={false} showLoja={true} showFav={false} showCart={true} showSobre={false} showCtt={false}/>
+      <NavBar color={false} invert={false} showLoja={true} showFav={false} showCart={true} showSobre={false} showCtt={false} />
 
       <section className="flex flex-col mt-20 w-screen min-h-[200px] shadow-md px-6 py-8 gap-4 h-[80vh] overflow-y-auto scroll-smooth">
         {favorites.length === 0 ? (
-          <Image src={EmptyFave} alt='Lista de favoritos vazia' draggable='false' className='flex self-center max-w-[80vw] xl:w-[40vw] pt-20'/>
+          <Image src={EmptyFave} alt='Lista de favoritos vazia' draggable='false' className='flex self-center max-w-[80vw] xl:w-[40vw] pt-20' />
         ) : (
           favorites.map(item => (
             <div key={item.id} className="flex flex-row gap-4 border-b border-gray-300 pb-4">
-              <img src={item.image} alt={item.name} className="w-24 h-24 rounded-lg object-cover" draggable={false}/>
+              <img src={item.image} alt={item.name} className="w-24 h-24 rounded-lg object-cover" draggable={false} />
               <div className="flex flex-col justify-between flex-grow">
                 <div className="flex flex-row justify-between">
                   <h2 className="text-lg font-medium">{item.name}</h2>

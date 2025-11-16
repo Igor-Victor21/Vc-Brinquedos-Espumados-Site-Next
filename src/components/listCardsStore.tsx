@@ -1,19 +1,20 @@
 import { CardStore } from "./cardsStore";
 
-type Produto = { 
-    id: string;
-    name: string;
-    description: string;
-    width?: number | null
-    length?: number | null
-    height?: number | null
-    diameter?: number | null
-    image: string;
-    price: number;
-    discount?: number | string | null;
+type Produto = {
+  id: string;
+  name: string;
+  description: string;
+  width?: number | null
+  length?: number | null
+  height?: number | null
+  diameter?: number | null
+  image: string;
+  price: number;
+  discount?: number | string | null;
+  section: string,
 }[];
 
-interface Props{
+interface Props {
   all: boolean;
   queryRouter: string;
   filterRouter: string;
@@ -35,19 +36,19 @@ export default async function CardListServer({ all, queryRouter, filterRouter }:
     const produtos = all ? data : data.slice(0, 3);
 
     // Filter by name (search)
-    const filtradosPorNome = queryRouter !== "" 
+    const filtradosPorNome = queryRouter !== ""
       ? produtos.filter((produto) =>
-          removeAcentos(produto.name.toLowerCase()).includes(
-            removeAcentos(queryRouter.toLowerCase())
-          )
+        removeAcentos(produto.name.toLowerCase()).includes(
+          removeAcentos(queryRouter.toLowerCase())
         )
+      )
       : produtos;
 
     // Filter by category (filterRouter)
     const filtradosFinais = filtradosPorNome.filter((produto) => {
       if (filterRouter === 'todos') return true;
-      if (filterRouter === 'kits') return produto.description.includes('|');
-      if (filterRouter === 'promocoes') return produto.description.includes('+');
+      if (filterRouter === 'kits') return produto.section.includes('Kits');
+      if (filterRouter === 'promocoes') return produto.section.includes('Promocoes');
       return true;
     });
 

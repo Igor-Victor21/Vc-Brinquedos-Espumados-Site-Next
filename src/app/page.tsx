@@ -1,7 +1,7 @@
 import Image from "next/image";
 import btnImg from './assets/images/btnStar.png'
 import btnTT from './assets/images/ttBlueStars.png'
-import banner from './assets/images/bannerLP.png'
+import banner from './assets/images/bannerLP2.png'
 import onmStore  from './assets/images/ornamentStore.png'
 import aboutPic1 from './assets/images/AboutPic1.jpeg'
 import aboutPic2 from './assets/images/AboutPic2.png'
@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <section className="w-full h-170">
       <section className="relative w-full h-170">
-            <Image src={banner} alt="" draggable="false" className='w-screen h-170 object-cover'/>       
+            <Image src={banner} alt="" draggable="false" priority className='w-screen h-170 object-cover'/>       
             <Navbar color={true} invert={true} showLoja={true} showFav={true} showCart={true} showSobre={true} showCtt={true} /> 
           <div className="mt-25 md:mt-35 ml-10 md:ml-25 absolute inset-0 flex flex-col">
             <h1 className="cursor-default font-extrabold text-3xl md:text-6xl text-red-50">Brincar com <br />

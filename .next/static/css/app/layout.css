@@ -461,11 +461,23 @@
   .h-30 {
     height: calc(var(--spacing) * 30);
   }
+  .h-100 {
+    height: calc(var(--spacing) * 100);
+  }
   .h-170 {
     height: calc(var(--spacing) * 170);
   }
+  .h-180 {
+    height: calc(var(--spacing) * 180);
+  }
+  .h-190 {
+    height: calc(var(--spacing) * 190);
+  }
   .h-200 {
     height: calc(var(--spacing) * 200);
+  }
+  .h-270 {
+    height: calc(var(--spacing) * 270);
   }
   .h-400 {
     height: calc(var(--spacing) * 400);
@@ -499,6 +511,9 @@
   }
   .h-full {
     height: 100%;
+  }
+  .h-screen {
+    height: 100vh;
   }
   .max-h-\[90vh\] {
     max-height: 90vh;

@@ -12,7 +12,7 @@ interface Props {
 }
 
 
-export default async function productsPage({ searchParams }: Props) {
+export default function productsPage({ searchParams }: Props) {
   const params = searchParams ?? {};
   const query = params.query || "";
   const filter = params.filter || "todos";

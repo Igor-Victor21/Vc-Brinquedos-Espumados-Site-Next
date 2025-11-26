@@ -160,10 +160,10 @@ ${enderecoTexto}
 
   return (
     <>
-      <Navbar color={false} invert={false} showLoja={true} showFav={true} showCart={false} showSobre={false} showCtt={false}/>
+      <Navbar color={false} invert={false} showLoja={true} showFav={true} showCart={false} showSobre={false} showCtt={false} />
 
       {/* Modal de endereço */}
-      <ModalEndereco isOpen={open} onClose={() => setOpen(false)} onValidChange={handleValidacaoEndereco}/>
+      <ModalEndereco isOpen={open} onClose={() => setOpen(false)} onValidChange={handleValidacaoEndereco} />
 
       {/* LISTA DE PRODUTOS */}
       <section className="flex flex-col mt-40 w-screen min-h-[200px] shadow-md px-6 py-8 gap-4 h-[500px] overflow-y-auto scroll-smooth">
@@ -209,10 +209,17 @@ ${enderecoTexto}
             )
           })
         )}
-              <div>
-                <h1>Alerta-01</h1>
-                <h1>Alerta-02</h1>
-              </div>
+        <div className="w-full max-w-[700px] mx-auto mb-5 my-0 lg:my-10 my-0 md:my-10 p-4 rounded-xl bg-amber-200 border-l-8 border-amber-500 shadow-md flex flex-col gap-3">
+          <p className="text-base text-amber-900 font-semibold leading-snug">
+            ⚠️ O frete é tratado via WhatsApp. Para Curitiba e região, oferecemos frete gratuito.
+          </p>
+
+          <p className="text-base text-amber-900 leading-snug">
+            As vendas são realizadas exclusivamente pelo WhatsApp, onde valores e medidas serão confirmados antes da conclusão da compra.
+          </p>
+        </div>
+
+
       </section>
 
       {/* BOTÕES + ALERTA */}

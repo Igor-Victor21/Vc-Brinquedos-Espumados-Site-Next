@@ -16,10 +16,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/cart/page.js"
     ],
-    "/products/page": [
+    "/favorites/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/products/page.js"
+      "static/chunks/app/favorites/page.js"
     ]
   }
 }

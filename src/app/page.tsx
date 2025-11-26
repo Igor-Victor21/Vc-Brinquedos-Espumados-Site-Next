@@ -3,7 +3,7 @@ import btnImg from './assets/images/btnStar.png'
 import btnTT from './assets/images/ttBlueStars.png'
 import banner from './assets/images/bannerLP2.png'
 import onmStore  from './assets/images/ornamentStore.png'
-import aboutPic1 from './assets/images/AboutPic1.jpeg'
+import aboutPic1 from './assets/images/Gabi&Felipe.png'
 import aboutPic2 from './assets/images/AboutPic2.png'
 import aboutVector1 from './assets/images/VectorAbout1.png'
 import aboutVector2 from './assets/images/VectorAbout2.png'
@@ -85,7 +85,7 @@ export default function Home() {
             </div>
             
             <div className="absolute h-20 right-0 pb-50 self-start ">
-              <Image src={aboutEnfeite} alt="" draggable="false" height={320}/>
+              <Image src={aboutEnfeite} alt="" draggable="false" height={200}/>
             </div>
             {/* <div className="absolute h-20 right-0 pb-50 self-start rotate-0">
               <Image src={aboutEnfeite2} alt="" height={260}/>
@@ -93,7 +93,7 @@ export default function Home() {
           </div>
 
           <div className="hidden xl:block xl:absolute right-5">
-              <Image src={aboutPic1} alt="" width={500} className="overflow-hidden mt-11 rounded-2xl"></Image>
+              <Image src={aboutPic1} alt="" width={460} className="overflow-hidden mt-5 rounded-2xl"></Image>
           </div>           
 
           <div className="hidden xl:block xl:absolute right-5 bottom-30">
@@ -105,7 +105,7 @@ export default function Home() {
           <div className="relative xl:w-[40vw] xl:mt-5 text-center xl:text-left p-5 z-10">
              <p className="text-[14pt] font-medium">
                 Na VC Brinquedos Espumados, acreditamos que brincar é uma 
-                das partes mais importantes da infância — e deve ser feita com 
+                das partes mais importantes da infância, e deve ser feita com 
                 <strong> segurança</strong>, criatividade e alegria!
               </p>
               
@@ -128,7 +128,7 @@ export default function Home() {
               <p className="text-[14pt] font-medium">
                 Cada peça da VC Brinquedos Espumados é criada com <strong>carinho</strong> e 
                 responsabilidade, porque sabemos que <strong>brincar é coisa séria</strong>
-                — e também a forma mais bonita de crescer.
+              , e também a forma mais bonita de crescer.
               </p>
             </div>
           </div>          

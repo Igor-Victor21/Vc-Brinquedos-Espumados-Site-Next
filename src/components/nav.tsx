@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image";
-import logo from '../app/assets/images/Logo.png'
+import logo from '../app/assets/images/Logo2.png'
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation"
@@ -31,10 +31,10 @@ export default function Navbar({color, invert, showLoja, showFav, showCart, show
 
   return (
     <div className={`w-full absolute top-0 left-0 z-50 ${color ? 'text-white' : 'text-black'}`}>
-      <div className={`${color ? 'bg-black md:bg-transparent' : 'bg-white'} max-w-7xl mx-auto px-9 py-2 flex items-center justify-between`}>
+      <div className={`${color ? ' md:bg-transparent' : 'bg-white'} max-w-7xl mx-auto px-9 py-2 flex items-center justify-between`}>
         <div>
           <Link className="flex items-center motion-safe:hover:scale-105 transition" href={"/"}>
-            <Image src={logo} alt="VC" width={40} height={40} className={invert ? 'invert' : ''} />
+            <Image src={logo} alt="VC" width={40} height={40} className={`${!color ? 'invert' : ''}`}/>
             <h1 className="ml-2 font-extrabold cursor-pointer">Brinquedos Espumados</h1>
           </Link>
         </div>
@@ -58,9 +58,9 @@ export default function Navbar({color, invert, showLoja, showFav, showCart, show
         </button>
       </div>
       {menuOpen && (
-        <div className={`relative rounded-b-lg ${color ? 'bg-black' : 'bg-white'} md:hidden`}>
-          <div className="absolute inset-0 bg-white/30 backdrop-blur-sm z-[-1]"/>
-          <div className="flex flex-col items-center px-9 py-4 space-y-4 shadow-md relative z-10">
+        <div className={`relative rounded-b-lg ${color ? 'md:bg-transparent' : 'bg-white'} md:hidden`}>
+          <div className="absolute inset-0 z-[-1]"/>
+          <div className="flex flex-row gap-5 items-center px-9 py-4 shadow-md relative z-10">
             {showLoja && <Link href="/products" className="hover:tracking-widest duration-200">Loja</Link>}
             {showFav && <Link href="/favorites" className="hover:tracking-widest duration-200"
             onClick={(e) => {e.preventDefault()

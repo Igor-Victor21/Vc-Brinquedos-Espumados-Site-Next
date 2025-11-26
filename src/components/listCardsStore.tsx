@@ -47,8 +47,10 @@ export default async function CardListServer({ all, queryRouter, filterRouter }:
     // Filter by category (filterRouter)
     const filtradosFinais = filtradosPorNome.filter((produto) => {
       if (filterRouter === 'todos') return true;
-      if (filterRouter === 'kits') return produto.section.includes('Kits');
+      if (filterRouter === 'playgrounds') return produto.section.includes('Playgrounds');
       if (filterRouter === 'promocoes') return produto.section.includes('Promocoes');
+      if (filterRouter === 'modulos') return produto.section.includes('Modulos');
+
       return true;
     });
 

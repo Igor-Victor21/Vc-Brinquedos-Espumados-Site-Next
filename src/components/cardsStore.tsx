@@ -1,6 +1,9 @@
 'use client'
 
+import { useState } from 'react'
 import CartBtn from './btnCart'
+import Toast from './toast'
+import ToastFav from './toastFav'
 import FaveBtn from './btnFave'
 
 interface Props {
@@ -33,19 +36,14 @@ export const CardStore = ({
       ? parseFloat(discount)
       : discount ?? 0
 
+  const [showToast, setShowToast] = useState(false)
+  const [showToastFav, setShowToastFav] = useState(false)
   const finalPrice = price - price * (discountNumber / 100)
 
   return (
-    <div className="flex flex-col w-60 self-center md:self-start gap-1 rounded-[25px] shadow-[0px_13px_19px_rgba(0,0,0,0.15)]">
+    <div className="flex flex-col w-60 min-h-[644px] h-auto self-center md:self-start gap-1 rounded-[25px] shadow-[0px_13px_19px_rgba(0,0,0,0.15)]">
       <div>
-        <img
-          src={image}
-          alt={name}
-          width={300}
-          height={200}
-          draggable={false}
-          className="rounded-t-[25px]"
-        />
+        <img src={image} alt={name} width={300} height={200} draggable={false} className="rounded-t-[25px]"/>
       </div>
 
       <div className="flex flex-row justify-between">
@@ -62,7 +60,7 @@ export const CardStore = ({
         </div>
 
         <div className="flex w-10 h-10 self-end justify-center mr-5">
-          <FaveBtn id={id} name={name} price={price} image={image} />
+          <FaveBtn id={id} name={name} price={price} image={image} onToastChange={setShowToastFav} />
         </div>
       </div>
 
@@ -83,9 +81,11 @@ export const CardStore = ({
                 R$ {price.toFixed(2).replace('.', ',')}
               </span>
             )}
+            <Toast message="Adicionado ao carrinho!" show={showToast} />
+            <ToastFav message="Adicionado ao favorito!" show={showToastFav} />
           </div>
 
-          <CartBtn id={id} name={name} width={width} length={length} height={height} diameter={diameter} discount={discount} price={price} finalPrice={finalPrice} image={image} />
+          <CartBtn id={id} name={name} width={width} length={length} height={height} diameter={diameter} discount={discount} price={price} finalPrice={finalPrice} onToastChange={setShowToast} image={image} />
         </div>
       </div>
     </div>

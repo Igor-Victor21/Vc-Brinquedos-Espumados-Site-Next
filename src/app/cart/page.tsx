@@ -76,10 +76,8 @@ export default function CartPage() {
       setEnderecoValido(!!valid);
       setEnderecoData(parsed);
 
-      // 🔥 Se NÃO estiver válido → abrir modal
       if (!valid) setOpen(true);
     } else {
-      // Nenhum endereço salvo → abrir modal
       setOpen(true);
     }
   }, []);
@@ -162,22 +160,10 @@ ${enderecoTexto}
 
   return (
     <>
-      <Navbar
-        color={false}
-        invert={false}
-        showLoja={true}
-        showFav={true}
-        showCart={false}
-        showSobre={false}
-        showCtt={false}
-      />
+      <Navbar color={false} invert={false} showLoja={true} showFav={true} showCart={false} showSobre={false} showCtt={false}/>
 
       {/* Modal de endereço */}
-      <ModalEndereco
-        isOpen={open}
-        onClose={() => setOpen(false)}
-        onValidChange={handleValidacaoEndereco}
-      />
+      <ModalEndereco isOpen={open} onClose={() => setOpen(false)} onValidChange={handleValidacaoEndereco}/>
 
       {/* LISTA DE PRODUTOS */}
       <section className="flex flex-col mt-40 w-screen min-h-[200px] shadow-md px-6 py-8 gap-4 h-[500px] overflow-y-auto scroll-smooth">
@@ -223,6 +209,10 @@ ${enderecoTexto}
             )
           })
         )}
+              <div>
+                <h1>Alerta-01</h1>
+                <h1>Alerta-02</h1>
+              </div>
       </section>
 
       {/* BOTÕES + ALERTA */}

@@ -11,6 +11,9 @@ interface FaveBtnProps {
   name: string
   price: number
   image: string
+
+  onToastChange: (show: boolean) => void
+
 }
 
 interface FaveItem {
@@ -21,13 +24,13 @@ interface FaveItem {
   quantity: number
 }
 
-export default function FaveBtn({ id, name, price, image }: FaveBtnProps) {
+export default function FaveBtn({ id, name, price, image, onToastChange }: FaveBtnProps) {
 
   const [isAdding, setIsAdding] = useState(false)
   const router = useRouter()
 
   const addToFave = () => {
-    if (typeof window === 'undefined') return    
+    if (typeof window === 'undefined') return
 
     setIsAdding(true)
 
@@ -51,6 +54,8 @@ export default function FaveBtn({ id, name, price, image }: FaveBtnProps) {
       console.error('Error adding to cart:', error)
     } finally {
       setIsAdding(false)
+      onToastChange(true)
+      setTimeout(() => onToastChange(false), 4000)
     }
   }
 
@@ -59,7 +64,7 @@ export default function FaveBtn({ id, name, price, image }: FaveBtnProps) {
       <button onClick={(e) => {
         e.preventDefault()
         addToFave()
-      }} disabled={isAdding} className='cursor-pointer duration-350 hover:bg-black rounded-md'><Image className='duration-350 hover:invert' src={botaoFavorito} alt="" width={30} /></button>
+      }} disabled={isAdding} className='cursor-pointer duration-350 hover:bg-black rounded-md p-1'><Image className='duration-350 hover:invert' src={botaoFavorito} alt="" width={30} /></button>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 'use client'
 
-import  Image  from 'next/image'
+import Image from 'next/image'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 
@@ -18,6 +18,7 @@ interface CartBtnProps {
   image: string
   finalPrice: number
 
+  onToastChange: (show: boolean) => void
 }
 
 interface CartItem {
@@ -34,7 +35,7 @@ interface CartItem {
   quantity: number
 }
 
-export default function CartBtn({ id, name, width, length, height, diameter, price, discount, image, finalPrice }: CartBtnProps) {
+export default function CartBtn({ id, name, width, length, height, diameter, price, discount, image, finalPrice, onToastChange }: CartBtnProps) {
   const [isAdding, setIsAdding] = useState(false)
   const router = useRouter()
 
@@ -63,10 +64,14 @@ export default function CartBtn({ id, name, width, length, height, diameter, pri
       console.error('Error adding to cart:', error)
     } finally {
       setIsAdding(false)
+      onToastChange(true)
+      setTimeout(() => onToastChange(false), 4000)
     }
-}
+  }
 
   return (
-    <button onClick={addToCart} disabled={isAdding} className='right-0 mr-5 cursor-pointer h-auto'><Image className="duration-400 hover:invert" src={botaoComprar} alt="" width={40} draggable={false}/></button>
+    <>
+      <button onClick={addToCart} disabled={isAdding} className='right-0 mr-5 cursor-pointer h-auto'><Image className="duration-400 hover:invert" src={botaoComprar} alt="" width={40} draggable={false} /></button>
+    </>
   )
 }

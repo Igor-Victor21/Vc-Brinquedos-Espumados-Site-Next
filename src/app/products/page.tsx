@@ -8,14 +8,14 @@ import { SearchBar } from "@/components/searchBar"
 import { BarContent } from "@/components/barContent"
 
 interface Props {
-  searchParams?: Record<string, string | undefined>;
+  searchParams: Promise<Record<string, string | undefined>>;
 }
 
 
-export default function productsPage({ searchParams }: Props) {
-  const params = searchParams ?? {};
-  const query = params.query || "";
-  const filter = params.filter || "todos";
+export default  async function productsPage({ searchParams }: Props) {
+  const params = await searchParams;
+  const query = params.query ?? "";
+  const filter = params.filter ?? "todos";
 
 
   return (

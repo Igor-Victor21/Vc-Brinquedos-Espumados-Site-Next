@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import BtnWpp from './wpp'
+import BtnEmail from './btnEmail'
 import BoxEmail from './formEmail'
 import PromoEmail from './inputEmail'
 
@@ -48,7 +49,7 @@ export default function Footer (){
                                     <Image src={Gmail} alt='' draggable='false' className='h-[26px] w-[26px] mb-4'/>
                                     <h1 className="font-medium">Email</h1>
                                     <h3 className="py-2 font-medium">Nossa equipe está pronta para ajudar.</h3>
-                                    <p className="text-{sm}">vcbrinquedosespumados@gmail.com</p>
+                                    <BtnEmail/>
                                 </div>
                                 <div className="z-40 w-1/2 xl:w-3xs flex items-center flex-col">
                                     <Image src={Wpp} alt='' draggable='false' className='h-[26px] w-[26px] mb-4'/>
@@ -105,8 +106,10 @@ export default function Footer (){
                             </div>
                             <div className="py-2">
                                 <h3 className="font-medium">Social</h3>
-                                <h3 className="font-medium">Facebook</h3>
-                                <h3 className="font-medium">Instagram</h3>
+                                <a href="https://www.instagram.com/vcbrinquedosespumados/" target='_blank' rel='noopener noreferrer'><h3 className="font-medium cursor-pointer">Instagram</h3></a>
+                                <a href="https://www.facebook.com/VCBrinquedosespumados/" target='_blank' rel='noopener noreferrer'><h3 className="font-medium cursor-pointer">Facebook</h3></a>
+                                
+                                
                             </div>
                         </div>
                     </div>

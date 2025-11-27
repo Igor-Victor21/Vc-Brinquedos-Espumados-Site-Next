@@ -43,7 +43,7 @@ export const CardStore = ({
   return (
     <div className="flex flex-col w-60 min-h-[644px] h-auto self-center md:self-start gap-1 rounded-[25px] shadow-[0px_13px_19px_rgba(0,0,0,0.15)]">
       <div>
-        <img src={image} alt={name} width={300} height={200} draggable={false} className="rounded-t-[25px]"/>
+        <img src={image} alt={name} width={300} height={200} draggable={false} className="rounded-t-[25px]" />
       </div>
 
       <div className="flex flex-row justify-between">
@@ -54,8 +54,10 @@ export const CardStore = ({
           <strong className='mt-[10px]'>Medidas:</strong>
           <p className="h-10">
             {(diameter ?? 0) > 0
-              ? `${(diameter ?? 0).toFixed(2)} X ${(height ?? 0).toFixed(2)}`
-              : `${(width ?? 0).toFixed(2)} X ${(length ?? 0).toFixed(2)} X ${(height ?? 0).toFixed(2)}`}
+              ? `${(diameter ?? 0) >= 1 ? `${(diameter ?? 0).toFixed(2)}m` : `${(diameter ?? 0 * 100).toFixed(0)}cm`} X ${(height ?? 0) >= 1 ? `${(height ?? 0).toFixed(2)}m` : `${((height ?? 0) * 100).toFixed(0)}cm`}`
+              : `${(width ?? 0) >= 1 ? `${(width ?? 0).toFixed(2)}m` : `${((width ?? 0) * 100).toFixed(0)}cm`} X ${(length ?? 0) >= 1 ? `${(length ?? 0).toFixed(2)}m` : `${((length ?? 0) * 100).toFixed(0)}cm`} X ${(height ?? 0) >= 1 ? `${(height ?? 0).toFixed(2)}m` : `${((height ?? 0) * 100).toFixed(0)}cm`}`
+            }
+
           </p>
         </div>
 

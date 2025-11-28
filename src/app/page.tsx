@@ -35,7 +35,7 @@ export default function Home() {
               para transformar qualquer espaço em um mundo de alegria. Tudo pensado para estimular <br />
               a imaginação com conforto e confiança!
               </p>
-            <Link className="flex items-center cursor-pointer p-5 font-medium w-50 h-15 self-start mt-20 border-1 rounded-4xl border-white text-red-50 hover:scale-108 transition" href={"#toys"}>
+            <Link className="flex items-center cursor-pointer p-5 font-medium w-55 h-15 self-start mt-20 border-1 rounded-4xl border-white text-red-50 hover:scale-108 transition" href={"#toys"}>
               Ver Brinquedos 
               <Image src={btnImg} alt="" draggable="false" className='w-8 h-8 object-cover ml-3'/>
               </Link>

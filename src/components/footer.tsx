@@ -43,7 +43,7 @@ export default function Footer (){
                             <Image src={Group} alt='' draggable="false" className='h-[28vh] w-[35vw]'/>
                         </div>
                         <div className="p-5 text-center flex flex-col items-center justify-center">
-                            <div className="flex flex-row pb-5">
+                            <div className="flex flex-row pb-5 gap-5">
                                 {/* parte superior */}
                                 <div className="z-40 w-1/2 xl:w-3xs flex items-center flex-col">                               
                                     <Image src={Gmail} alt='' draggable='false' className='h-[26px] w-[26px] mb-4'/>
@@ -58,7 +58,7 @@ export default function Footer (){
                                     <BtnWpp/>
                                 </div>
                             </div>
-                            <div className="flex flex-row">
+                            <div className="flex flex-row gap-10">
                                 {/* parte inferior */}
                                 <div className="z-40 w-1/2 xl:w-3xs flex items-center flex-col">
                                     <Image src={Loja} alt='' draggable='false' className='h-[26px] w-[26px] mb-4'/>

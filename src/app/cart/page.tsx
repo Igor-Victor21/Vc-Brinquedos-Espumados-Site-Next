@@ -129,12 +129,10 @@ export default function CartPage() {
     const enderecoTexto = `
 📍 *Endereço do cliente*
 Nome: ${enderecoData.nome}
-Telefone: ${enderecoData.telefone}
 CEP: ${enderecoData.cep}
 Rua: ${enderecoData.rua}, Nº ${enderecoData.numero} - ${enderecoData.complemento}
 Bairro: ${enderecoData.bairro}
-Cidade: ${enderecoData.cidade}
-`
+Cidade: ${enderecoData.cidade}`
 
     const itemList = produtos.map((produto) => {
       const quantidade = getQuantidade(produto.id)
@@ -151,8 +149,7 @@ ${itemList}
 
 💰 Total: R$${total.toFixed(2)}
 
-${enderecoTexto}
-    `
+${enderecoTexto}`
 
     const zapURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`
     window.open(zapURL, "_blank")
@@ -245,7 +242,7 @@ ${enderecoTexto}
           {/* Botão Finalizar Compra */}
           <button
             onClick={handleZap}
-            className="absolute w-52 bottom-14 left-1/2 -translate-x-1/2 cursor-pointer motion-safe:hover:scale-105 p-2 bg-[#7DACFF] active:bg-[#6C85B3] rounded-lg duration-200"
+            className="absolute w-55 bottom-14 left-1/2 -translate-x-1/2 cursor-pointer motion-safe:hover:scale-105 p-2 bg-[#7DACFF] active:bg-[#6C85B3] rounded-lg duration-200"
           >
             Finalizar Compra
           </button>
@@ -254,9 +251,9 @@ ${enderecoTexto}
           {/* Botão Editar Endereço */}
           <button
             onClick={() => setOpen(true)}
-            className="absolute w-52 bottom-2 left-1/2 -translate-x-1/2 px-4 py-2 bg-[#7DACFF] cursor-pointer rounded "
-          >
-            Editar Endereço
+            className={`absolute w-55 bottom-2 left-1/2 -translate-x-1/2 px-4 py-2 ${enderecoValido ? "bg-[#7DACFF]" : "bg-amber-200 border-l-4 border-amber-500"} cursor-pointer rounded-lg`}
+          >           
+            {enderecoValido ? "Editar Endereço" : "Informações incompletas"}
           </button>
         </div>
 

@@ -41,14 +41,14 @@ export const CardStore = ({
   const finalPrice = price - price * (discountNumber / 100)
 
   return (
-    <div className="flex flex-col w-60 min-h-[644px] h-auto self-center md:self-start gap-1 rounded-[25px] shadow-[0px_13px_19px_rgba(0,0,0,0.15)]">
+    <div className="flex flex-col w-80 md:w-100 min-h-[644px] h-auto self-center md:self-start gap-1 rounded-[25px] shadow-[0px_13px_19px_rgba(0,0,0,0.15)]">
       <div>
-        <img src={image} alt={name} width={300} height={200} draggable={false} className="rounded-t-[25px]" />
+        <img src={image} alt={name} width={300} height={200} draggable={false} className="rounded-t-[25px] mx-auto " />
       </div>
 
       <div className="flex flex-row justify-between">
-        <div className="flex w-50 flex-col ml-5">
-          <h2 className="h-auto font-medium">{name}</h2>
+        <div className="flex w-50 md:w-80 flex-col ml-5">
+          <h2 className="h-auto font-medium flex-1">{name}</h2>
           <strong className='mt-[10px]'>Descrição:</strong>
           <p className="h-auto">{description}</p>
           <strong className='mt-[10px]'>Medidas:</strong>

@@ -56,9 +56,18 @@ export default async function CardListServer({ all, queryRouter, filterRouter }:
 
     if (filtradosFinais.length === 0) return <>Nenhum produto foi encontrado!</>;
 
+    // ORGANIZAÇÃO — ordenar pelo número após "V-"
+    const ordenados = [...filtradosFinais].sort((a, b) => {
+      const numA = parseInt(a.name.replace("V-", "").split(" ")[0]);
+      const numB = parseInt(b.name.replace("V-", "").split(" ")[0]);
+
+      return numA - numB;
+    });
+
+
     return (
       <>
-        {filtradosFinais.map((item) => (
+        {ordenados.map((item) => (
           <CardStore
             key={item.id}
             name={item.name}

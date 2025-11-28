@@ -64,7 +64,7 @@ export default function FaveBtn({ id, name, price, image, onToastChange }: FaveB
       <button onClick={(e) => {
         e.preventDefault()
         addToFave()
-      }} disabled={isAdding} className='cursor-pointer duration-350 hover:bg-black rounded-md p-1'><Image className='duration-350 hover:invert' src={botaoFavorito} alt="" width={30} /></button>
+      }} disabled={isAdding} className='cursor-pointer duration-350 hover:bg-black rounded-md'><Image className='duration-350 hover:invert' src={botaoFavorito} alt="" width={30} /></button>
     </div>
   )
 }

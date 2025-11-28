@@ -99,10 +99,10 @@ export default function ModalEndereco({ isOpen, onClose, onValidChange }: ModalP
                     <button
                         onClick={onClose}
                         className={`px-6 py-2 rounded-full text-white transition-all cursor-pointer
-                            ${isValid ? "bg-[#7DACFF]" : "bg-red-600"}
+                            ${isValid ? "bg-[#7DACFF]" : "bg-red-500"}
                         `}
                     >
-                        {isValid ? "Salvar Endereço" : "Fechar - dados incompletos"}
+                        {isValid ? "Salvar Endereço" : "Fechar - Informações incompletas"}
                     </button>
                 </div>
             </div>
